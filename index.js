@@ -115,7 +115,7 @@ app.put('/products/:id', bodyParser.json(),function (req, res) {
 })
 
 //post
-app.post('/products',bodyParser.json(), function (req, res) {
+app.post('/players',bodyParser.json(), function (req, res) {
     let newProduct = {
         id: uniqid(), 
         name: sanitizeHtml(req.body.name),
