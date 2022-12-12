@@ -81,9 +81,11 @@ app.put('/players/:id', bodyParser.json(),function (req, res) {
     let putProduct = {
         id: id, 
         name: sanitizeHtml(req.body.name),
-        quantity: req.body.quantity,
-        price: req.body.price,
-        type: sanitizeHtml(req.body.type)
+        qualification: req.body.qualification,
+        position: sanitizeHtml(req.body.position),
+        club: sanitizeHtml(req.body.club),
+        age: req.body.age,
+        nationality: sanitizeHtml(req.body.nationality)
     }
     //beolvassuk az összes adatot: json -> obj
     fs.readFile(dataFile, (error, data)=>{
@@ -119,9 +121,11 @@ app.post('/players',bodyParser.json(), function (req, res) {
     let newProduct = {
         id: uniqid(), 
         name: sanitizeHtml(req.body.name),
-        quantity: req.body.quantity,
-        price: req.body.price,
-        type: sanitizeHtml(req.body.type)
+        qualification: req.body.qualification,
+        position: sanitizeHtml(req.body.position),
+        club: sanitizeHtml(req.body.club),
+        age: req.body.age,
+        nationality: sanitizeHtml(req.body.nationality)
     }
 
     
