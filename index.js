@@ -15,10 +15,10 @@ app.get('/players/:id', function (req, res) {
 
     //beolvassuk az összes adatot: json -> obj
     fs.readFile(dataFile, (error, data)=>{
-        let products = JSON.parse(data);
+        let players = JSON.parse(data);
 
         //megkeressük a megfelelő product-ot id alján
-        const productsById = products.find(product => product.id === id)
+        const productsById = players.find(player => player.id === id)
         if (!productsById) {
             // nincs meg
             let message = {
@@ -36,8 +36,8 @@ app.get('/players/:id', function (req, res) {
 //get products
 app.get('/players', function (req, res) {
     fs.readFile(dataFile, (error, data)=>{
-        let products = data;
-        res.send(products);
+        let players = data;
+        res.send(players);
     });
 })
 
@@ -48,10 +48,10 @@ app.delete('/players/:id', function (req, res) {
 
     //beolvassuk az összes adatot: json -> obj
     fs.readFile(dataFile, (error, data)=>{
-        let products = JSON.parse(data);
+        let players = JSON.parse(data);
 
         //megkeressük a megfelelő product indexét id alján
-        const productsIndexById = products.findIndex(product => product.id === id)
+        const productsIndexById = players.findIndex(players => player.id === id)
 
         if (productsIndexById === -1) {
             // nincs meg
@@ -63,11 +63,11 @@ app.delete('/players/:id', function (req, res) {
             return;
         }
         //letöröljük
-        products.splice(productsIndexById, 1);
+        players.splice(productsIndexById, 1);
 
         //visszaír: obj -> json
-        products = JSON.stringify(products)
-        fs.writeFile(dataFile, products, (error)=>{
+        players = JSON.stringify(players)
+        fs.writeFile(dataFile, players, (error)=>{
             console.log(error);
             //visszaküldjük, hogy melyik id-t töröltük
             res.send({id: id});
@@ -87,10 +87,10 @@ app.put('/players/:id', bodyParser.json(),function (req, res) {
     }
     //beolvassuk az összes adatot: json -> obj
     fs.readFile(dataFile, (error, data)=>{
-        let products = JSON.parse(data);
+        let players = JSON.parse(data);
 
         //megkeressük a megfelelő product indexét id alján
-        const productsIndexById = products.findIndex(product => product.id === id)
+        const productsIndexById = players.findIndex(player => player.id === id)
 
         if (productsIndexById === -1) {
             // nincs meg
@@ -102,11 +102,11 @@ app.put('/players/:id', bodyParser.json(),function (req, res) {
             return;
         }
         //felülírjuk
-        products[productsIndexById] = putProduct;
+        players[productsIndexById] = putProduct;
 
         //visszaír: obj -> json
-        products = JSON.stringify(products)
-        fs.writeFile(dataFile, products, (error)=>{
+        players = JSON.stringify(players)
+        fs.writeFile(dataFile, players, (error)=>{
             console.log(error);
             //visszaküldjük, a módosított rekordot
             res.send(putProduct);
@@ -127,12 +127,12 @@ app.post('/players',bodyParser.json(), function (req, res) {
     
     fs.readFile(dataFile,(error, data)=>{
         //beolvas, json -> obj
-        let products = JSON.parse(data);
+        let players = JSON.parse(data);
         //push
-        products.push(newProduct);
+        players.push(newProduct);
         //visszaír: obj -> json
-        products = JSON.stringify(products)
-        fs.writeFile(dataFile, products, (error)=>{
+        players = JSON.stringify(players)
+        fs.writeFile(dataFile, players, (error)=>{
             console.log(error);
             res.send(newProduct);
         })
