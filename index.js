@@ -34,7 +34,7 @@ app.get('/products/:id', function (req, res) {
 })
 
 //get products
-app.get('/products', function (req, res) {
+app.get('/players', function (req, res) {
     fs.readFile(dataFile, (error, data)=>{
         let products = data;
         res.send(products);
