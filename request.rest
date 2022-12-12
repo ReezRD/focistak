@@ -1,0 +1,30 @@
+### read
+get http://localhost:3000/products
+
+### read by id
+get http://localhost:3000/products/apcj6eslbgd0wf1
+
+### delete
+delete http://localhost:3000/products/apcjgc4lbge9j06
+
+### post
+post http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "name": "Á1111",
+    "quantity": 24,
+    "price": 2500,
+    "type": "tejtermék"
+}
+
+### put
+put http://localhost:3000/products/apcj3hklbge9fnr
+Content-Type: application/json
+
+{
+    "name": "<script>alert('betörtem')</script> heló",
+    "quantity": 124,
+    "price": 3500,
+    "type": "kakaótermék"
+}
