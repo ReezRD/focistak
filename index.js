@@ -51,7 +51,7 @@ app.delete('/players/:id', function (req, res) {
         let players = JSON.parse(data);
 
         //megkeressük a megfelelő product indexét id alján
-        const productsIndexById = players.findIndex(players => player.id === id)
+        const productsIndexById = players.findIndex(player => player.id === id)
 
         if (productsIndexById === -1) {
             // nincs meg
