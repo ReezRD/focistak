@@ -76,7 +76,7 @@ app.delete('/players/:id', function (req, res) {
 })
 
 //put product by id
-app.put('/products/:id', bodyParser.json(),function (req, res) {
+app.put('/players/:id', bodyParser.json(),function (req, res) {
     let id = req.params.id;
     let putProduct = {
         id: id, 
