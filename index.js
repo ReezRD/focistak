@@ -10,7 +10,7 @@ const port = 3000
 const app = express()
 
 //get product by id
-app.get('/products/:id', function (req, res) {
+app.get('/players/:id', function (req, res) {
     let id = req.params.id;
 
     //beolvassuk az összes adatot: json -> obj
@@ -43,7 +43,7 @@ app.get('/players', function (req, res) {
 
 
 //delete product by id
-app.delete('/products/:id', function (req, res) {
+app.delete('/players/:id', function (req, res) {
     let id = req.params.id;
 
     //beolvassuk az összes adatot: json -> obj
