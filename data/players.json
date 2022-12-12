@@ -1,0 +1,20 @@
+[
+    {
+        "id": "apcj3hklbge9fnr",
+        "name": "Ferenc",
+        "qualification": 8,
+        "position": "csatár",
+        "club": "Újszásziak",
+        "age": 25,
+        "nationality": "magyar"
+    },
+    {
+        "id": "apcj9mwlbge9hsb",
+        "name": "István",
+        "qualification": 7,
+        "position": "hátvéd",
+        "club": "Szolnokiak",
+        "age": 23,
+        "nationality": "magyar"
+    }
+]
