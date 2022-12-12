@@ -4,7 +4,7 @@ const bodyParser = require("body-parser")
 const uniqid = require('uniqid'); 
 const sanitizeHtml = require('sanitize-html');
 
-const dataFile = "./data/products.json";
+const dataFile = "./data/players.json";
 const port = 3000
 
 const app = express()
