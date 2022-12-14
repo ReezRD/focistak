@@ -12,7 +12,6 @@ post http://localhost:3000/players
 Content-Type: application/json
 
 {
-    "id": "apcj3hklbge9fnr",
     "name": "Ferenc",
     "qualification": 8,
     "position": "csatár",
