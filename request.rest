@@ -12,11 +12,11 @@ post http://localhost:3000/players
 Content-Type: application/json
 
 {
-    "name": "Ferenc",
-    "qualification": 8,
+    "name": "Armando",
+    "qualification": 10,
     "position": "csatár",
     "club": "Újszásziak",
-    "age": 25,
+    "age": 20,
     "nationality": "magyar"
 }
 
